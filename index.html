@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#5b1fd1" />
+    <title>Juntar Frutas</title>
+  </head>
+  <body>
+    <!-- menu inicial -->
+    <section id="inicio" class="tela">
+      <canvas class="fundo-vivo" id="fundo-vivo" aria-hidden="true"></canvas>
+      <div class="raios" aria-hidden="true"></div>
+      <div class="brilhos" aria-hidden="true"></div>
+      <header class="barra-topo">
+        <button class="redondo pequeno" id="abrir-config" aria-label="Configurações"><img src="/icones/config.png" alt="" /></button>
+        <span class="pilula moeda"><img class="ico-moeda" src="/icones/moeda.svg" alt=""><b class="qtd-moedas"></b></span>
+        <span class="pilula estrela"><img class="ico-estrela" src="/icones/estrela.svg" alt=""><b class="qtd-estrelas"></b></span>
+      </header>
+      <h1 class="logo" id="logo" aria-label="Juntar Frutas"></h1>
+      <div class="palco">
+        <div class="cena-mascote">
+          <i class="sombra-pe"></i>
+          <canvas id="mascote-menu" width="1024" height="1280" aria-label="Macaquinho"></canvas>
+        </div>
+      </div>
+      <button class="btn-jogar" id="jogar">
+        <span>Jogar</span><small id="jogar-fase"></small>
+      </button>
+      <nav class="atalhos">
+        <button class="atalho rosa" id="abrir-premio"><img src="/icones/presente.png" alt="" /><span>Prêmio</span><em class="badge" id="badge-premio">1</em></button>
+        <button class="atalho roxo" id="abrir-bau"><img src="/icones/bau-fechado.png" alt="" /><span>Baú</span><em class="badge" id="badge-bau"></em><i class="barra-bau"><i id="progresso-bau"></i></i></button>
+        <button class="atalho verde" id="abrir-loja"><img src="/icones/loja.png" alt="" /><span>Loja</span></button>
+      </nav>
+    </section>
+
+    <!-- mapa de fases -->
+    <section id="mapa" class="tela escondida">
+      <header class="barra-topo">
+        <button class="redondo" data-ir="inicio" aria-label="Voltar"><img src="/icones/voltar.svg" alt=""></button>
+        <img class="mundo-atual" id="mundo-atual" src="/faixas/mundo1.png" alt="" />
+        <span class="pilula moeda"><img class="ico-moeda" src="/icones/moeda.svg" alt=""><b class="qtd-moedas"></b></span>
+        <span class="pilula estrela"><img class="ico-estrela" src="/icones/estrela.svg" alt=""><b class="qtd-estrelas"></b></span>
+      </header>
+      <div class="trilha-rolagem"><div class="trilha" id="trilha"></div></div>
+    </section>
+
+    <!-- loja -->
+    <section id="loja" class="tela escondida">
+      <header class="barra-topo">
+        <button class="redondo" data-ir="inicio" aria-label="Voltar"><img src="/icones/voltar.svg" alt=""></button>
+        <h2 class="titulo-tela">Loja</h2>
+        <span class="pilula moeda"><img class="ico-moeda" src="/icones/moeda.svg" alt=""><b class="qtd-moedas"></b></span>
+      </header>
+      <div class="loja-rolagem" id="loja-conteudo"></div>
+    </section>
+
+    <!-- jogo -->
+    <section id="jogo" class="tela escondida">
+      <div class="raios lentos" aria-hidden="true"></div>
+      <header class="hud">
+        <button class="redondo" data-ir="mapa" aria-label="Voltar ao mapa"><img src="/icones/voltar.svg" alt=""></button>
+        <div class="cartao-meta">
+          <small id="hud-fase"></small>
+          <div id="hud-meta"></div>
+        </div>
+        <div class="cartao-restam"><b id="hud-restam"></b><small>frutas</small></div>
+      </header>
+      <div class="sequencia" id="hud-sequencia" aria-label="Ordem das frutas"></div>
+      <div class="pote"><div class="jarro vaso"><canvas id="tela" width="330" height="580"></canvas><i class="moldura"></i><i class="aro"></i><i class="reflexo"></i></div></div>
+      <footer class="poderes">
+        <button class="poder" id="poder-martelo" data-poder="martelos"><img src="/icones/martelo.svg" alt="" /><span>Martelo</span><em class="badge"></em></button>
+        <button class="poder escondida" id="poder-bomba" data-poder="bombas"><img src="/icones/bomba.png" alt="" /><span>Bomba</span><em class="badge"></em></button>
+        <div class="depois"><canvas id="hud-depois" width="96" height="96"></canvas><small>Depois</small></div>
+        <button class="poder escondida" id="poder-varinha" data-poder="varinhas"><img src="/icones/varinha.png" alt="" /><span>Varinha</span><em class="badge"></em></button>
+        <button class="poder" id="poder-troca" data-poder="trocas"><img src="/icones/trocar.svg" alt="" /><span>Trocar</span><em class="badge"></em></button>
+      </footer>
+      <img class="mascote-fase" id="mascote-fase" src="/mascote/hd/feliz.png" alt="" aria-hidden="true" />
+      <div class="dica-martelo escondida" id="dica-martelo"></div>
+    </section>
+
+    <div id="modal" class="modal escondida"><div class="caixa" id="modal-caixa"></div></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="cabo" x1="0" x2="1"><stop offset="0" stop-color="#ffcf7a"/><stop offset=".5" stop-color="#e08a2e"/><stop offset="1" stop-color="#9c4f0f"/></linearGradient>
+    <linearGradient id="cabeca" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8fa3"/><stop offset=".45" stop-color="#ff2d55"/><stop offset="1" stop-color="#a3001f"/></linearGradient>
+    <linearGradient id="aro" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff6c2"/><stop offset="1" stop-color="#e0a800"/></linearGradient>
+  </defs>
+  <g transform="translate(50 52) scale(0.72) rotate(-35) translate(-50 -52)">
+    <rect x="43" y="34" width="14" height="60" rx="7" fill="url(#cabo)" stroke="#6b3200" stroke-width="3"/>
+    <rect x="46" y="40" width="3" height="48" rx="1.5" fill="#fff" opacity=".45"/>
+    <rect x="14" y="10" width="72" height="34" rx="12" fill="url(#cabeca)" stroke="#6b0016" stroke-width="3.5"/>
+    <rect x="8" y="12" width="12" height="30" rx="5" fill="url(#aro)" stroke="#8a5a00" stroke-width="3"/>
+    <rect x="80" y="12" width="12" height="30" rx="5" fill="url(#aro)" stroke="#8a5a00" stroke-width="3"/>
+    <rect x="24" y="15" width="44" height="7" rx="3.5" fill="#fff" opacity=".6"/>
+  </g>
+</svg>
